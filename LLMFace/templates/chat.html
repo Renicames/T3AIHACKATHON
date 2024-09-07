@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/renicamesL.png') }}" alt="Renicames Logo" class="logo">
+            <h1 class="title">Renicames</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Anasayfa</a></li>
+                <li><a href="/about">Hakkımızda</a></li>
+                <li><a href="/project">Projemiz</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right"></div> <!-- Boş bir div ile sağdaki dengeyi sağla -->
+    </header>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="message bot-message">
+                Merhaba! Size nasıl yardımcı olabilirim?
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            </div>
+        </div>        
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Mesajınızı yazın..." autocomplete="off"/>
+            <button id="send-btn">Gönder</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

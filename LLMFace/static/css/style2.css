@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #262626; /* Koyu gri arka plan */
+    color: #ECECEC; /* Açık gri metin rengi */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    cursor: default;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #383633; /* Koyu gri navbar arka planı */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ECECEC; /* Açık gri metin rengi */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffffff; /* Hover durumunda beyaz renk */
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 20px;
+    text-align: center;
+    background-color: #262626; /* Sayfanın geri kalanı ile aynı arka plan rengi */
+}
+
+.intro-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ECECEC; /* Açık gri */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.intro-header p {
+    font-size: 18px;
+    color: #ECECEC; /* Açık gri */
+    margin-bottom: 40px;
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 5px #031a31, 0 0 10px #031a31; }
+    to { text-shadow: 0 0 15px #031a31, 0 0 20px #031a31; }
+}
+
+.start-button .button {
+    background-color: #031a31; /* Mavi ton */
+    color: #ffffff; /* Beyaz metin rengi */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-button .button:hover {
+    background-color: #022244; /* Daha koyu mavi */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-header h1 {
+        font-size: 36px;
+    }
+
+    .intro-header p {
+        font-size: 16px;
+    }
+
+    .start-button .button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+}

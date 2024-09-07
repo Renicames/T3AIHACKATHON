@@ -1,0 +1,327 @@
+/* Genel stil ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #262626; /* Koyu gri, modern bir ton */
+    color: #ECECEC; /* Açık gri metin rengi */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    cursor: default;
+}
+
+/* Navbar stili */
+.navbar {
+    display: flex;
+    align-items: center; /* Logo ve menüyü dikey olarak ortala */
+    justify-content: space-between; /* Üç bölgeyi ayır */
+    width: 100%;
+    background-color: #333;
+    padding: 0px 20px;
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo ve başlık stili */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 50%;
+    filter: brightness(1.2);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ECECEC;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 5px #031a31;
+}
+
+/* Menü stili */
+.navbar nav {
+    flex: 1; /* Menüyü ortalamak için esnek alan */
+    display: flex;
+    justify-content: center; /* Menü öğelerini ortala */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Menüyü ortala */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin: 0 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #ECECEC;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.navbar nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ECECEC;
+    transition: width 0.3s ease;
+}
+
+.navbar nav ul li a:hover::after {
+    width: 100%; /* Hover durumunda alt çizgiyi genişlet */
+}
+
+.navbar nav ul li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ECECEC;
+}
+
+.navbar nav ul li a.active {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ECECEC;
+}
+
+/* Boş sağ alan için stil (nav-right) */
+.nav-right {
+    width: 200px; /* Logo ile aynı genişlikte */
+}
+
+
+/* Chat Container stili */
+.chat-container {
+    width: 1300px;
+    height: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Hafif gölge */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #383633; /* Koyu, modern gri ton */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-top: 100px; /* Navbar altında yer açmak için */
+}
+
+/* Chat Box stili */
+.chat-box {
+    height: 480px;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #333; /* Orta gri ton */
+    border-radius: 8px;
+    border: 1px solid #666; /* Hafif gri sınır */
+    animation: chatBoxSlide 1s ease-in-out;
+}
+
+@keyframes chatBoxSlide {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Kullanıcı ve bot mesajları için genel stil */
+.message {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    max-width: 70%;
+    font-size: 16px; /* Metin boyutu */
+    line-height: 1.5; /* Metin satır aralığı */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+/* Kullanıcı mesajı için stil */
+.user-message {
+    background-color: #031a31a2; /* Daha belirgin bir mavi ton */
+    color: #FFFFFF; /* Beyaz metin rengi */
+    align-self: flex-end; /* Sağ tarafa hizala */
+}
+
+/* Bot mesajı için stil */
+.bot-message {
+    background-color: #2c2c2c; /* Koyu gri arka plan */
+    color: #ECECEC; /* Açık gri metin rengi */
+    align-self: flex-start; /* Sol tarafa hizala */
+}
+
+
+/* Input Box stili */
+.input-box {
+    display: flex;
+    border-top: 1px solid #666; /* Hafif gri sınır */
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #444; /* Orta koyulukta gri */
+    border: none;
+    color: #ECECEC; /* Açık gri metin */
+    outline: none;
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px #031a31; /* Odaklanıldığında mavi parlama */
+}
+
+button {
+    background-color: #031a31a2; /* Hafif mavi */
+    color: #ffffff; /* Koyu gri metin */
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #031a31; /* Hover durumunda daha koyu mavi */
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Beğenme ve diğer butonların görünüm ayarları */
+/* Beğenme ve diğer butonların görünüm ayarları */
+.feedback-buttons {
+    display: flex;
+    gap: 1px; /* Butonlar arasındaki boşluğu azalt */
+    justify-content: flex-start; /* Sola hizalama */
+    margin-top: 10px;
+}
+
+.feedback-btn {
+    background-color: #333; /* Koyu gri arka plan */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    font-size: 1px; /* Simge boyutu, daha küçük */
+    color: #B0B0B0; /* Gri simge rengi */
+    padding: 1px; /* Buton boyutunu küçültmek için daha az padding */
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-btn:hover {
+    color: #FFFFFF; /* Hover durumunda simge rengi beyaz */
+    background-color: #444; /* Hover durumunda arka plan rengi daha açık gri */
+    transform: scale(1.1); /* Hover durumunda hafif büyüme efekti */
+}
+
+.feedback-btn:active {
+    transform: scale(0.95); /* Tıklama durumunda hafif küçülme efekti */
+}
+
+
+/* Buton simgeleri */
+.feedback-btn i {
+    font-size: 18px; /* Simge boyutu */
+}
+
+
+.like-btn, .dislike-btn {
+    background-color: #333; /* Koyu gri arka plan */
+    border: none; /* Kenarlık yok */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    font-size: 15px; /* Simge boyutu, daha küçük */
+    color: #B0B0B0; /* Gri simge rengi */
+    padding: 8px; /* Buton boyutunu küçültmek için daha az padding */
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.like-btn:hover, .dislike-btn:hover {
+    color: #FFFFFF; /* Hover durumunda simge rengi beyaz */
+    background-color: #444; /* Hover durumunda arka plan rengi daha açık gri */
+    transform: scale(1.1); /* Hover durumunda hafif büyüme efekti */
+}
+
+.like-btn:active, .dislike-btn:active {
+    transform: scale(0.95); /* Tıklama durumunda hafif küçülme efekti */
+}
+
+/* Yazma göstergesi stili */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #555; /* Daha koyu gri */
+    color: #ECECEC; /* Açık gri metin */
+    max-width: 75%;
+}
+
+.typing-indicator::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #031a31; /* Hafif mavi */
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.typing-indicator-text {
+    animation: typingIndicatorFade 1.4s infinite alternate;
+}
+
+@keyframes typingIndicatorFade {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
