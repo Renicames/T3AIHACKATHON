@@ -1,17 +1,12 @@
-
-
-
 # T3 AI BDM - DoRA Finetuning
 
-**MindLaw**, T5 modelinin Renicames tarafından geliştirilmiş 14,854 veriden oluşan bir veri setiyle eğitilerek hazırlanmış bir Yapay Zeka Danışmanlık Hizmeti (ChatBot) projesidir. Bu proje, kullanıcıların Türk hukuku ile ilgili sorularına doğru ve hızlı yanıtlar sunmayı amaçlamaktadır.
-
-## Bu Projeye Katkıda Bulunma
-Projemize katkıda bulunmak istiyorsanız, lütfen [CONTRIBUTING](https://github.com/Renicames/MindLaw/blob/main/CONTRIBUTING.rst) dosyasına göz atın.
-
+**T3AI**, T3AI BDM modelinin Renicames tarafından geliştirilmiş 26,447 veriden oluşan bir veri setiyle eğitilerek hazırlanmış bir Yapay Zeka Danışmanlık Hizmeti (ChatBot) projesidir. Bu proje, kullanıcıların Türk hukuku, Türk eğitim sistemi, tarım ve sürdürülebilirlik konuları ile ilgili sorularına doğru ve hızlı yanıtlar sunmayı amaçlamaktadır.
 
 ## Projenin Amacı ve Motivasyonu
 
-MindLaw, Türk hukuk sistemine dair doğru ve hızlı bilgiye erişim sağlamak amacıyla geliştirilmiştir. Türkiye’nin çeşitli hukuk kaynaklarından derlenen verilerle oluşturulan bu proje, kullanıcıların hukuki sorularına etkin çözümler sunmayı hedeflemektedir. Projede kullanılan veri seti, Renicames tarafından ülkemizde ilk kez açık kaynak olarak paylaşılan, Türk hukuku üzerine özel olarak hazırlanmış bir soru-cevap veri setidir. Bu veri seti, Türk Anayasası ve diğer yasal belgelerden derlenmiş olup, Türkiye'de hukuk alanında yapay zeka kullanımı için önemli bir adım teşkil etmektedir.
+Projenin amacı, T3 AI BDM modelinin DoRA (Weight-Decomposed Low-Rank Adaptation) yöntemiyle optimize edilerek yapay zekâ modellerinin daha verimli ve etkili bir şekilde adapte olmasını sağlamaktır. Bu projede, sınırlı veri setleri ve kaynaklarla büyük dil modellerini hızla eğitmek ve spesifik görevler için uyarlamak hedeflenmiştir. Hackathon kapsamında bu yaklaşımın uygulamalı olarak test edilmesi, hem gerçek dünya problemlerine çözümler üretmek hem de AI modellerinin özelleştirilme sürecinde hız ve esneklik kazandırmayı amaçlamıştır.
+
+Projenin motivasyonu, yapay zekâ uygulamalarının hızla büyüyen ihtiyaçlarına cevap verebilmek için daha az kaynakla daha verimli modeller yaratmak ve modelleri spesifik görevlere adapte etme sürecini hızlandırmaktır.
 
 
 ## Proje Arayüzü 
@@ -22,63 +17,10 @@ MindLaw, Türk hukuk sistemine dair doğru ve hızlı bilgiye erişim sağlamak 
 
 Veri setimizin geliştirilme süreci aşağıdaki adımları içermektedir:
 
-1. **Araştırma**: Türk Anayasası, çeşitli hukuk siteleri ve diğer yasal belgeler kapsamlı bir şekilde incelenmiştir.
-2. **Veri Toplama**: Resmi kaynaklardan hukuki veriler titizlikle toplanmıştır.
+1. **Araştırma**: Türk Anayasası, çeşitli hukuk siteleri ve diğer yasal belgeler kapsamlı bir şekilde incelenmiştir. Ayrıca, Türk eğitim sistemi için Milli Eğitim Bakanlığı'nın yayınladığı PDF dokümanlar ve tarım sektörü için Tarım ve Orman Bakanlığı'nın resmi sitesi baz alınmıştır.
+2. **Veri Toplama**: Resmi kaynaklardan hukuki, eğitim ve tarıma ilişkin veriler titizlikle toplanmıştır. Sürdürülebilirlik verileri ise ilgili sitelerdeki metinlerin yapay zeka araçları kullanılarak doğru formata getirilmesiyle oluşturulmuştur.
 3. **Veri Temizleme**: Toplanan veriler, tekrar eden bilgilerden arındırılarak yapılandırılmıştır.
-4. **Veri Seti Oluşturma**: Temizlenmiş veriler, modelin eğitimi için kullanılmak üzere JSON formatında bir veri setine dönüştürülmüştür. Veri setinde toplam 14,854 soru-cevap çifti bulunmaktadır.
-
-Veri Setine erişmek için [buraya tıklayabilirsiniz](https://huggingface.co/datasets/Renicames/turkish-law-chatbot).
-
-## Model Detayları
-
-**Model Şeması**
-
-![Model Şeması](https://github.com/user-attachments/assets/4d4f656a-ab96-4b8d-9c8d-84cdab56a7dc)
-
-**Model Bilgisi**
-
-Projede, T5 Base modeli kullanılmıştır ve bu model, hukuk veri seti ile eğitilerek özelleştirilmiştir.
-
-## Performans Değerlendirmesi
-
-Modelimizin performansı ROUGE (Recall-Oriented Understudy for Gisting Evaluation) metrikleri ile değerlendirilmiştir. Aşağıdaki görselde, T5 Base modelinin ROUGE-1, ROUGE-2 ve ROUGE-L değerleri gösterilmektedir:
-
-![ROUGE Değerleri](https://github.com/user-attachments/assets/ce2bcd85-f240-41e6-aed5-7cb833ebc1b0)
-
-T5 Base modelinin parametre optimizasyonu sonuçları ise aşağıda verilmiştir:
-
-![Parametre Optimizasyonu](https://github.com/user-attachments/assets/62656a8d-8626-458e-b1fd-396d258389c4)
-
-
-
-
-## Kullanım
-
-Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
-
-1. Bu projeyi klonlayın:
-   ```sh
-   git clone https://github.com/Renicames/MindLaw.git
-   ```
-
-2. Gerekli bağımlılıkları yükleyin:
-   ```sh
-   cd Mindlaw
-   pip install -r requirements.txt
-   ```
-
-3. Chatbot'u başlatın:
-   ```sh
-   cd WebSite
-   python mindlaw.py
-   ```
-
-
-## Youtube Linki
-
-Projemizin tanıtım videosunu izlemek için [tıklayın.](https://youtu.be/zFq64Aul54U)
-
-
+4. **Veri Seti Oluşturma**: Temizlenmiş veriler, modelin eğitimi için kullanılmak üzere JSON formatında bir veri setine dönüştürülmüştür. Veri setinde toplam 26,447 soru-cevap çifti bulunmaktadır.
 
 
 ## Lisans
