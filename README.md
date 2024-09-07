@@ -22,6 +22,26 @@ Veri setimizin geliştirilme süreci aşağıdaki adımları içermektedir:
 3. **Veri Temizleme**: Toplanan veriler, tekrar eden bilgilerden arındırılarak yapılandırılmıştır.
 4. **Veri Seti Oluşturma**: Temizlenmiş veriler, modelin eğitimi için kullanılmak üzere JSON formatında bir veri setine dönüştürülmüştür. Veri setinde toplam 26,447 soru-cevap çifti bulunmaktadır.
 
+## Kullanım
+
+Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
+
+1. Bu projeyi klonlayın:
+   ```sh
+   git clone https://github.com/Renicames/T3-AI-BDM
+   ```
+
+2. Gerekli bağımlılıkları yükleyin:
+   ```sh
+   cd T3-AI-BDM
+   pip install -r requirements.txt
+   ```
+
+3. Chatbot'u başlatın:
+   ```sh
+   cd LLMFace
+   python app.py
+   ```
 
 ## Lisans
 
