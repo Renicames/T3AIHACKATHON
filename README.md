@@ -1,5 +1,9 @@
 # T3 AI BDM - DoRA Finetuning
 
+## Takım Adı: Renicames-291239
+- 👤 Recep Bülbül
+- 👤 Mehmet Arzu
+
 **T3AI**, T3AI BDM modelinin Renicames tarafından geliştirilmiş 26,447 veriden oluşan bir veri setiyle eğitilerek hazırlanmış bir Yapay Zeka Danışmanlık Hizmeti (ChatBot) projesidir. Bu proje, kullanıcıların Türk hukuku, Türk eğitim sistemi, tarım ve sürdürülebilirlik konuları ile ilgili sorularına doğru ve hızlı yanıtlar sunmayı amaçlamaktadır.
 
 ## Projenin Amacı ve Motivasyonu
@@ -22,6 +26,10 @@ Veri setimizin geliştirilme süreci aşağıdaki adımları içermektedir:
 3. **Veri Temizleme**: Toplanan veriler, tekrar eden bilgilerden arındırılarak yapılandırılmıştır.
 4. **Veri Seti Oluşturma**: Temizlenmiş veriler, modelin eğitimi için kullanılmak üzere JSON formatında bir veri setine dönüştürülmüştür. Veri setinde toplam 26,447 soru-cevap çifti bulunmaktadır.
 
+## Veri Seti
+Veri Setine erişmek için [buraya tıklayabilirsiniz](https://huggingface.co/datasets/Renicames/turkish-law-chatbot).
+
+
 ## Kullanım
 
 Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
@@ -37,7 +45,12 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
    pip install -r requirements.txt
    ```
 
-3. Chatbot'u başlatın:
+3. İnce Ayarlama Süreci Başlatma:
+   ```sh
+   python finetune.py
+   ```
+
+4. Chatbot'u başlatın/Sınama Görevi:
    ```sh
    cd LLMFace
    python app.py
