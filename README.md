@@ -29,6 +29,9 @@ Veri setimizin geliştirilme süreci aşağıdaki adımları içermektedir:
 ## Veri Seti
 Veri Setine erişmek için [buraya tıklayabilirsiniz](https://huggingface.co/datasets/Renicames/turkish-law-chatbot).
 
+## Model
+Modele erişmek için [buraya tıklayabilirsiniz](https://huggingface.co/recepbulbul/Renicamesv7).
+
 
 ## Kullanım
 
